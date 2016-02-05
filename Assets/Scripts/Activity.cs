@@ -7,7 +7,7 @@ public class Activity : MonoBehaviour {
 	void Start () {
 		for (int i = 0; i < 31; i++){
 			if (i % 3 == 0 && i != 0){
-				Debug.Log ("はしお");
+				Debug.Log ("3の倍数");
 			} else {
 				Debug.Log (i);
 			}

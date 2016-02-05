@@ -37,9 +37,10 @@ public class CharacterMain : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		Debug.Log (_2DCamera.transform.position.x);
 		//カメラの追従
-		if (transform.position.y > 23){
-			_2DCamera.transform.position = new Vector3 (transform.position.x, transform.position.y, -7.5f);
+		if (5 < transform.position.y){
+			_2DCamera.transform.position = new Vector3 (transform.position.x + 5, transform.position.y, -7.5f);
 		} else {
 			_2DCamera.transform.position = new Vector3 (transform.position.x + 5, _2DCamera.transform.position.y, -7.5f);
 		}
