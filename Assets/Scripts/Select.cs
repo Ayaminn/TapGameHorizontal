@@ -3,10 +3,8 @@ using System.Collections;
 
 public class Select : MonoBehaviour {
 
-	public void CallStage () {
-		if (tag == "One") {
-			Application.LoadLevel ("Stage1");
-		}
+	public void CallStage (LevelInfo levelInfo) {
+		
 	}
 
 
