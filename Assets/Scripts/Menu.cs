@@ -2,6 +2,10 @@
 using System.Collections;
 
 public class Menu : MonoBehaviour {
+	
+	public void StartGame () {
+		Debug.Log ("Start");
+	}
 
 	// Use this for initialization
 	void Start () {
