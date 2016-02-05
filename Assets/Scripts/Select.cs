@@ -1,20 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Select : MonoBehaviour {
-
-	public void CallStage (LevelInfo levelInfo) {
-		
-	}
-
-
-	// Use this for initialization
+	
 	void Start () {
-	
+		Button button = this.GetComponent <Button> ();
+		button.onClick.AddListener (() => {
+			CallStage(button.tag);
+		});
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	void CallStage(string i){
+		if (i == "One") {
+			Application.LoadLevel ("Stage1");
+		}
 	}
 }
