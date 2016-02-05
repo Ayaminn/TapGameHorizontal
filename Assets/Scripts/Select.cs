@@ -4,7 +4,9 @@ using System.Collections;
 public class Select : MonoBehaviour {
 
 	public void CallStage () {
-		
+		if (tag == "One") {
+			Application.LoadLevel ("Stage1");
+		}
 	}
 
 
