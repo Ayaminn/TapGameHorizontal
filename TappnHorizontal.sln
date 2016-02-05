@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{2708B605-51C8-1681-8D62-5F9E02A84734}") = "TappnHorizontal", "Assembly-CSharp.csproj", "{1815776E-2791-109C-CF57-FEA76C8BA979}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1815776E-2791-109C-CF57-FEA76C8BA979}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1815776E-2791-109C-CF57-FEA76C8BA979}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1815776E-2791-109C-CF57-FEA76C8BA979}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1815776E-2791-109C-CF57-FEA76C8BA979}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
