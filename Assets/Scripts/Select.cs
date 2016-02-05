@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Menu : MonoBehaviour {
-	
-	public void StartGame () {
-		Application.LoadLevel ("Select");
+public class Select : MonoBehaviour {
+
+	public void CallStage () {
+		
 	}
+
 
 	// Use this for initialization
 	void Start () {
