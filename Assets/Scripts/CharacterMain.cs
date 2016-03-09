@@ -85,20 +85,20 @@ public class CharacterMain : MonoBehaviour {
 
 		if (Input.GetKey(KeyCode.RightArrow)) {
 			if (camera2D == true){
-				transform.position += new Vector3 (0.1f, 0, 0);
+				transform.position += new Vector3 (0.05f, 0, 0);
 			} else if (rightCamera3D == true) {
-				transform.position += new Vector3 (0, 0, -0.1f);
+				transform.position += new Vector3 (0, 0, -0.05f);
 			} else {
-				transform.position += new Vector3 (0, 0, 0.1f);
+				transform.position += new Vector3 (0, 0, 0.05f);
 			}
 
 		} else if (Input.GetKey(KeyCode.LeftArrow)) {
 			if (camera2D == true){
-				transform.position += new Vector3 (-0.1f, 0, 0);
+				transform.position += new Vector3 (-0.05f, 0, 0);
 			} else if (rightCamera3D == true) {
-				transform.position += new Vector3 (0, 0, 0.1f);
+				transform.position += new Vector3 (0, 0, 0.05f);
 			} else {
-				transform.position += new Vector3 (0, 0, -0.1f);
+				transform.position += new Vector3 (0, 0, -0.05f);
 			}
 
 		} else if (Input.GetKeyDown(KeyCode.Space) && onGround) {
@@ -109,16 +109,16 @@ public class CharacterMain : MonoBehaviour {
 
 		} else if (Input.GetKey(KeyCode.UpArrow) && camera2D == false) {
 			if (rightCamera3D == true) {
-				transform.position += new Vector3 (0.1f, 0, 0);
+				transform.position += new Vector3 (0.05f, 0, 0);
 			} else {
-				transform.position += new Vector3 (-0.1f, 0, 0);
+				transform.position += new Vector3 (-0.05f, 0, 0);
 			}
 
 		} else if (Input.GetKey(KeyCode.DownArrow) && camera2D == false) {
 			if (rightCamera3D == true) {
-				transform.position += new Vector3 (-0.1f, 0, 0);
+				transform.position += new Vector3 (-0.05f, 0, 0);
 			} else {
-				transform.position += new Vector3 (0.1f, 0, 0);
+				transform.position += new Vector3 (0.05f, 0, 0);
 			}
 		}
 	}
