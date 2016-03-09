@@ -73,6 +73,7 @@ public class CharacterMain : MonoBehaviour {
 				rightCamera3D = false;
 				leftCamera3D = true;
 				camera2D = false;
+
 			} else {
 				_2DCamera.enabled = true;
 				left3DCamera.enabled = false;
