@@ -39,7 +39,7 @@ public class CharacterMain : MonoBehaviour {
 	void Update () {
 		//ゲームオーバー
 		if (transform.position.y < 0){
-			
+			transform.position = new Vector3 (-7.0f, 1.1f, -0.3f);
 		}
 
 		//カメラの追従
