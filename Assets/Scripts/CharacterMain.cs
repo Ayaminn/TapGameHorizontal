@@ -104,7 +104,7 @@ public class CharacterMain : MonoBehaviour {
 		} else if (Input.GetKeyDown(KeyCode.Space) && onGround) {
 			//ジャンプ
 			if(rb.velocity.y < 0.2f) {
-				rb.AddForce(transform.up * jump, ForceMode.Impulse);
+				rb.AddForce(transform.up * jump);
 			}
 
 		} else if (Input.GetKey(KeyCode.UpArrow) && camera2D == false) {
