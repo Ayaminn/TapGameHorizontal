@@ -104,7 +104,7 @@ public class CharacterMain : MonoBehaviour {
 		} else if (Input.GetKeyDown(KeyCode.Space) && onGround) {
 			//ジャンプ
 			if(rb.velocity.y < 0.2f) {
-				rb.AddForce(transform.up * jump);
+				rb.AddForce(transform.up * jump, ForceMode.Impulse);
 			}
 
 		} else if (Input.GetKey(KeyCode.UpArrow) && camera2D == false) {
@@ -113,6 +113,7 @@ public class CharacterMain : MonoBehaviour {
 			} else {
 				transform.position += new Vector3 (-0.1f, 0, 0);
 			}
+
 		} else if (Input.GetKey(KeyCode.DownArrow) && camera2D == false) {
 			if (rightCamera3D == true) {
 				transform.position += new Vector3 (-0.1f, 0, 0);
