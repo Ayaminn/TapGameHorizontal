@@ -14,6 +14,8 @@ public class Select : MonoBehaviour {
 	void CallStage(string i){
 		if (i == "One") {
 			Application.LoadLevel ("Stage1");
+		} else if (i == "return") {
+			Application.LoadLevel ("Menu");
 		}
 	}
 }
