@@ -42,15 +42,15 @@ public class CharacterMain : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//ゲームオーバー
-		if (transform.position.y < 0){
+		if (transform.position.y < -0.5f){
 			transform.position = new Vector3 (-7.0f, 1.1f, -0.3f);
 		}
 
 		//カメラの追従
 		if (4f < transform.position.y){
-			_2DCamera.transform.position = new Vector3 (_2DCamera.transform.position.x, chars.transform.position.y + 1, -3.8f);
+			_2DCamera.transform.position = new Vector3 (_2DCamera.transform.position.x, chars.transform.position.y + 1, -17.4f);
 		} else {
-			_2DCamera.transform.position = new Vector3 (_2DCamera.transform.position.x, 4.97f, -3.8f);
+			_2DCamera.transform.position = new Vector3 (_2DCamera.transform.position.x, 4.97f, -17.4f);
 		}
 
 		if (Input.GetKeyDown (KeyCode.A)) {
@@ -58,6 +58,8 @@ public class CharacterMain : MonoBehaviour {
 			if (_2DCamera.enabled) {
 				_2DCamera.enabled = false;
 				right3DCamera.enabled = true;
+				Debug.Log ("A");
+				Debug.Log (right3DCamera.enabled);
 				right3DCamera.transform.eulerAngles = new Vector3 (0, 90, 0);
 				rightCamera3Df = true;
 				leftCamera3Df = false;
