@@ -15,13 +15,14 @@ public class SetAct: MonoBehaviour {
 		
 	}
 
-	void OnTriggerEnter () {
+	void OnTriggerStay () {
 		wf.SetActive (false);
 		rota.SetActive (true);
 	}
 		
-	void OnTrigerExit () {
+	void OnTriggerExit () {
+		Debug.Log ("hoge");
 		wf.SetActive (true);
-		rota.SetActive (true);
+		rota.SetActive (false);
 	}
 }
