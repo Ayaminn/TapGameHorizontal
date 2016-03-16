@@ -15,6 +15,7 @@ public class CharacterMain : MonoBehaviour {
 	Coll coll;
 	private Animator anim;
 	public GameObject chars;
+	public Animation anima;
 
 	// Use this for initialization
 	void Start () {
@@ -41,15 +42,15 @@ public class CharacterMain : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//ゲームオーバー
-		if (transform.position.y < 0){
-			transform.position = new Vector3 (-7.0f, 1.1f, -0.3f);
-		}
+//		if (transform.position.y < 0){
+//			transform.position = new Vector3 (-7.0f, 1.1f, -0.3f);
+//		}
 
 		//カメラの追従
-		if (5 < transform.position.y){
-			_2DCamera.transform.position = new Vector3 (transform.position.x + 5, transform.position.y, -7.5f);
+		if (4f < transform.position.y){
+			_2DCamera.transform.position = new Vector3 (_2DCamera.transform.position.x, chars.transform.position.y + 1, -3.8f);
 		} else {
-			_2DCamera.transform.position = new Vector3 (transform.position.x + 5, _2DCamera.transform.position.y, -7.5f);
+			_2DCamera.transform.position = new Vector3 (_2DCamera.transform.position.x, 4.97f, -3.8f);
 		}
 
 		if (Input.GetKeyDown (KeyCode.A)) {
@@ -114,7 +115,7 @@ public class CharacterMain : MonoBehaviour {
 			//ジャンプ
 			if (rb.velocity.y < 0.2f) {
 				anim.SetBool ("walk", false);
-				anim.SetBool ("jump", true);
+				anim.Play("A_jump", 0, 0.0f);
 				anim.SetBool ("idle", false);
 				rb.AddForce (transform.up * jump);
 			}
@@ -139,9 +140,9 @@ public class CharacterMain : MonoBehaviour {
 				transform.position += new Vector3 (0.08f, 0, 0);
 			}
 		} else {
-			anim.SetBool ("walk", false);
-			anim.SetBool ("jump", false);
-			anim.SetBool ("idle", true);
+//			anim.SetBool ("walk", false);
+//			anim.SetBool ("jump", false);
+//			anim.SetBool ("idle", true);
 		}
 	}
 }
