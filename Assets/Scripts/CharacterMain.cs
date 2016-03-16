@@ -6,10 +6,10 @@ public class CharacterMain : MonoBehaviour {
 	public Rigidbody rb;
 	public float jump;
 	Camera _2DCamera;
-	Camera right3DCamera;
-	Camera left3DCamera;
-	public bool leftCamera3D = false;
-	public bool rightCamera3D = false;
+	public Camera right3DCamera;
+	public Camera left3DCamera;
+	public bool leftCamera3Df = false;
+	public bool rightCamera3Df = false;
 	public bool camera2D = true;
 	public bool onGround = false;
 	Coll coll;
@@ -27,8 +27,8 @@ public class CharacterMain : MonoBehaviour {
 		_2DCamera = GameObject.Find("2D Camera").GetComponent<Camera>();
 //		right3DCamera = GameObject.Find ("3D Camera Right").GetComponent<Camera> ();
 //		left3DCamera = GameObject.Find ("3D Camera Left").GetComponent<Camera> ();
-//		right3DCamera.enabled = false;
-//		left3DCamera.enabled = false;
+		right3DCamera.enabled = false;
+		left3DCamera.enabled = false;
 	}
 
 	void OnCollisionEnter(Collision col){
@@ -42,9 +42,9 @@ public class CharacterMain : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//ゲームオーバー
-//		if (transform.position.y < 0){
-//			transform.position = new Vector3 (-7.0f, 1.1f, -0.3f);
-//		}
+		if (transform.position.y < 0){
+			transform.position = new Vector3 (-7.0f, 1.1f, -0.3f);
+		}
 
 		//カメラの追従
 		if (4f < transform.position.y){
@@ -59,14 +59,14 @@ public class CharacterMain : MonoBehaviour {
 				_2DCamera.enabled = false;
 				right3DCamera.enabled = true;
 				right3DCamera.transform.eulerAngles = new Vector3 (0, 90, 0);
-				rightCamera3D = true;
-				leftCamera3D = false;
+				rightCamera3Df = true;
+				leftCamera3Df = false;
 				camera2D = false;
 			} else {
 				_2DCamera.enabled = true;
 				right3DCamera.enabled = false;
-				rightCamera3D = false;
-				leftCamera3D = false;
+				rightCamera3Df = false;
+				leftCamera3Df = false;
 				camera2D = true;
 			}
 		} else if (Input.GetKeyDown (KeyCode.S)) {
@@ -74,15 +74,15 @@ public class CharacterMain : MonoBehaviour {
 				_2DCamera.enabled = false;
 				left3DCamera.enabled = true;
 				left3DCamera.transform.eulerAngles = new Vector3 (0, -90, 0);
-				rightCamera3D = false;
-				leftCamera3D = true;
+				rightCamera3Df = false;
+				leftCamera3Df = true;
 				camera2D = false;
 
 			} else {
 				_2DCamera.enabled = true;
 				left3DCamera.enabled = false;
-				rightCamera3D = false;
-				leftCamera3D = false;
+				rightCamera3Df = false;
+				leftCamera3Df = false;
 				camera2D = true;
 			}
 		}
@@ -93,7 +93,7 @@ public class CharacterMain : MonoBehaviour {
 			anim.SetBool ("idle", false);
 			if (camera2D == true) {
 				transform.position += new Vector3 (0.08f, 0, 0);
-			} else if (rightCamera3D == true) {
+			} else if (rightCamera3Df == true) {
 				transform.position += new Vector3 (0, 0, -0.08f);
 			} else {
 				transform.position += new Vector3 (0, 0, 0.08f);
@@ -105,7 +105,7 @@ public class CharacterMain : MonoBehaviour {
 			anim.SetBool ("idle", false);
 			if (camera2D == true) {
 				transform.position += new Vector3 (-0.08f, 0, 0);
-			} else if (rightCamera3D == true) {
+			} else if (rightCamera3Df == true) {
 				transform.position += new Vector3 (0, 0, 0.08f);
 			} else {
 				transform.position += new Vector3 (0, 0, -0.08f);
@@ -124,7 +124,7 @@ public class CharacterMain : MonoBehaviour {
 			anim.SetBool ("walk", true);
 			anim.SetBool ("jump", false);
 			anim.SetBool ("idle", false);
-			if (rightCamera3D == true) {
+			if (rightCamera3Df == true) {
 				transform.position += new Vector3 (0.08f, 0, 0);
 			} else {
 				transform.position += new Vector3 (-0.08f, 0, 0);
@@ -134,7 +134,7 @@ public class CharacterMain : MonoBehaviour {
 			anim.SetBool ("walk", true);
 			anim.SetBool ("jump", false);
 			anim.SetBool ("idle", false);
-			if (rightCamera3D == true) {
+			if (rightCamera3Df == true) {
 				transform.position += new Vector3 (-0.08f, 0, 0);
 			} else {
 				transform.position += new Vector3 (0.08f, 0, 0);
