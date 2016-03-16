@@ -140,7 +140,7 @@ public class CharacterMain : MonoBehaviour {
 				transform.position += new Vector3 (0.08f, 0, 0);
 			}
 		} else {
-//			anim.SetBool ("walk", false);
+			anim.SetBool ("walk", false);
 //			anim.SetBool ("jump", false);
 //			anim.SetBool ("idle", true);
 		}
