@@ -14,11 +14,12 @@ public class CharacterMain : MonoBehaviour {
 	public bool onGround = false;
 	Coll coll;
 	private Animator anim;
+	public GameObject chars;
 
 	// Use this for initialization
 	void Start () {
 		//coll = transform.findchild ("On").GetComponent<Coll> ().nowOn;
-		anim = GetComponent<Animator>();
+		anim = chars.GetComponent<Animator>();
 
 		rb = GetComponent<Rigidbody> ();
 
