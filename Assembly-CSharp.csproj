@@ -51,7 +51,10 @@
      <Compile Include="Assets\Scripts\Menu.cs" />
      <Compile Include="Assets\Scripts\Select.cs" />
      <Compile Include="Assets\Scripts\SetAct.cs" />
+     <Compile Include="Assets\Scripts\Test.cs" />
      <Compile Include="Assets\Scripts\Waterwheel.cs" />
+     <Compile Include="Assets\myUnityChanScript.cs" />
+     <None Include="Assets\Animal Adventure Pack\sample_Prefabs\Shader\Unlit_decal.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

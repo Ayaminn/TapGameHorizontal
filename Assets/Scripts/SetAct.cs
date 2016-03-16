@@ -21,7 +21,6 @@ public class SetAct: MonoBehaviour {
 	}
 		
 	void OnTriggerExit () {
-		Debug.Log ("hoge");
 		wf.SetActive (true);
 		rota.SetActive (false);
 	}

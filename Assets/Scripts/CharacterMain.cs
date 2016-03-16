@@ -13,18 +13,20 @@ public class CharacterMain : MonoBehaviour {
 	public bool camera2D = true;
 	public bool onGround = false;
 	Coll coll;
+	private Animator anim;
 
 	// Use this for initialization
 	void Start () {
 		//coll = transform.findchild ("On").GetComponent<Coll> ().nowOn;
+		anim = GetComponent<Animator>();
 
 		rb = GetComponent<Rigidbody> ();
 
 		_2DCamera = GameObject.Find("2D Camera").GetComponent<Camera>();
-		right3DCamera = GameObject.Find ("3D Camera Right").GetComponent<Camera> ();
-		left3DCamera = GameObject.Find ("3D Camera Left").GetComponent<Camera> ();
-		right3DCamera.enabled = false;
-		left3DCamera.enabled = false;
+//		right3DCamera = GameObject.Find ("3D Camera Right").GetComponent<Camera> ();
+//		left3DCamera = GameObject.Find ("3D Camera Left").GetComponent<Camera> ();
+//		right3DCamera.enabled = false;
+//		left3DCamera.enabled = false;
 	}
 
 	void OnCollisionEnter(Collision col){
@@ -83,8 +85,11 @@ public class CharacterMain : MonoBehaviour {
 			}
 		}
 
-		if (Input.GetKey(KeyCode.RightArrow)) {
-			if (camera2D == true){
+		if (Input.GetKey (KeyCode.RightArrow)) {
+			anim.SetBool ("walk", true);
+			anim.SetBool ("jump", false);
+			anim.SetBool ("idle", false);
+			if (camera2D == true) {
 				transform.position += new Vector3 (0.08f, 0, 0);
 			} else if (rightCamera3D == true) {
 				transform.position += new Vector3 (0, 0, -0.08f);
@@ -92,8 +97,11 @@ public class CharacterMain : MonoBehaviour {
 				transform.position += new Vector3 (0, 0, 0.08f);
 			}
 
-		} else if (Input.GetKey(KeyCode.LeftArrow)) {
-			if (camera2D == true){
+		} else if (Input.GetKey (KeyCode.LeftArrow)) {
+			anim.SetBool ("walk", true);
+			anim.SetBool ("jump", false);
+			anim.SetBool ("idle", false);
+			if (camera2D == true) {
 				transform.position += new Vector3 (-0.08f, 0, 0);
 			} else if (rightCamera3D == true) {
 				transform.position += new Vector3 (0, 0, 0.08f);
@@ -101,25 +109,38 @@ public class CharacterMain : MonoBehaviour {
 				transform.position += new Vector3 (0, 0, -0.08f);
 			}
 
-		} else if (Input.GetKeyDown(KeyCode.Space) && onGround) {
+		} else if (Input.GetKeyDown (KeyCode.Space) && onGround) {
 			//ジャンプ
-			if(rb.velocity.y < 0.2f) {
-				rb.AddForce(transform.up * jump);
+			if (rb.velocity.y < 0.2f) {
+				anim.SetBool ("walk", false);
+				anim.SetBool ("jump", true);
+				anim.SetBool ("idle", false);
+				rb.AddForce (transform.up * jump);
 			}
 
-		} else if (Input.GetKey(KeyCode.UpArrow) && camera2D == false) {
+		} else if (Input.GetKey (KeyCode.UpArrow) && camera2D == false) {
+			anim.SetBool ("walk", true);
+			anim.SetBool ("jump", false);
+			anim.SetBool ("idle", false);
 			if (rightCamera3D == true) {
 				transform.position += new Vector3 (0.08f, 0, 0);
 			} else {
 				transform.position += new Vector3 (-0.08f, 0, 0);
 			}
 
-		} else if (Input.GetKey(KeyCode.DownArrow) && camera2D == false) {
+		} else if (Input.GetKey (KeyCode.DownArrow) && camera2D == false) {
+			anim.SetBool ("walk", true);
+			anim.SetBool ("jump", false);
+			anim.SetBool ("idle", false);
 			if (rightCamera3D == true) {
 				transform.position += new Vector3 (-0.08f, 0, 0);
 			} else {
 				transform.position += new Vector3 (0.08f, 0, 0);
 			}
+		} else {
+			anim.SetBool ("walk", false);
+			anim.SetBool ("jump", false);
+			anim.SetBool ("idle", true);
 		}
 	}
 }
