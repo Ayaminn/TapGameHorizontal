@@ -45,16 +45,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Box.cs" />
      <Compile Include="Assets\Scripts\CharacterMain.cs" />
      <Compile Include="Assets\Scripts\Coll.cs" />
      <Compile Include="Assets\Scripts\Five.cs" />
+     <Compile Include="Assets\Scripts\Goal.cs" />
      <Compile Include="Assets\Scripts\Menu.cs" />
      <Compile Include="Assets\Scripts\Select.cs" />
      <Compile Include="Assets\Scripts\SetAct.cs" />
+     <Compile Include="Assets\Scripts\Stop.cs" />
      <Compile Include="Assets\Scripts\Test.cs" />
      <Compile Include="Assets\Scripts\Waterwheel.cs" />
-     <Compile Include="Assets\myUnityChanScript.cs" />
+     <Compile Include="Assets\Scripts\monster.cs" />
+     <Compile Include="Assets\Scripts\myUnityChanScript.cs" />
      <None Include="Assets\Animal Adventure Pack\sample_Prefabs\Shader\Unlit_decal.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\MobileBloom.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ContrastComposite.shader" />
+     <None Include="Assets\Monster\shaders\vertexAnim.shader" />
+     <None Include="Assets\Monster\shaders\bumpSpecmap.shader" />
+     <None Include="Assets\Monster\shaders\metalA.shader" />
+     <None Include="Assets\Monster\shaders\caveShader.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableBlur.shader" />
+     <None Include="Assets\Monster\shaders\monsterShader.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
