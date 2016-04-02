@@ -90,15 +90,34 @@ public class CharacterMain : MonoBehaviour {
 		}
 
 		if (Input.GetKey (KeyCode.RightArrow)) {
-			anim.SetBool ("walk", true);
 			anim.SetBool ("jump", false);
-			anim.SetBool ("idle", false);
 			if (camera2D == true) {
 				transform.position += new Vector3 (0.12f, 0, 0);
+				if (rb.velocity.y > 0.2f) {
+					anim.SetBool ("walk", false);
+					anim.SetBool ("idle", true);
+				} else {
+					anim.SetBool ("walk", true);
+					anim.SetBool ("idle", false);
+				}
 			} else if (rightCamera3Df == true) {
 				transform.position += new Vector3 (0, 0, -0.12f);
+				if (rb.velocity.y > 0.2f) {
+					anim.SetBool ("walk", false);
+					anim.SetBool ("idle", true);
+				} else {
+					anim.SetBool ("walk", true);
+					anim.SetBool ("idle", false);
+				}
 			} else {
 				transform.position += new Vector3 (0, 0, 0.12f);
+				if (rb.velocity.y > 0.2f) {
+					anim.SetBool ("walk", false);
+					anim.SetBool ("idle", true);
+				} else {
+					anim.SetBool ("walk", true);
+					anim.SetBool ("idle", false);
+				}
 			}
 
 		} else if (Input.GetKey (KeyCode.LeftArrow)) {
@@ -117,7 +136,7 @@ public class CharacterMain : MonoBehaviour {
 			//ジャンプ
 			if (rb.velocity.y < 0.2f) {
 				anim.SetBool ("walk", false);
-				anim.Play("A_jump", 0, 0.0f);
+				anim.Play ("A_jump", 0, 0.0f);
 				anim.SetBool ("idle", false);
 				rb.AddForce (transform.up * jump);
 			}
