@@ -71,6 +71,7 @@ public class CharacterMain : MonoBehaviour {
 				leftCamera3Df = false;
 				camera2D = true;
 			}
+
 		} else if (Input.GetKeyDown (KeyCode.S)) {
 			if (_2DCamera.enabled) {
 				_2DCamera.enabled = false;
