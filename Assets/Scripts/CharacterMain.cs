@@ -144,7 +144,7 @@ public class CharacterMain : MonoBehaviour {
 		} else {
 			anim.SetBool ("walk", false);
 //			anim.SetBool ("jump", false);
-//			anim.SetBool ("idle", true);
+			anim.SetBool ("idle", true);
 		}
 	}
 }
