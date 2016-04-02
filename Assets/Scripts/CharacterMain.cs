@@ -31,12 +31,12 @@ public class CharacterMain : MonoBehaviour {
 		left3DCamera.enabled = false;
 	}
 
-	void OnCollisionEnter(Collision col){
-		onGround = true;
-	}
-
 	void OnCollisionExit(Collision col){
 		onGround = false;
+	}
+
+	void OnCollisionStay(Collision col){
+		onGround = true;
 	}
 	
 	// Update is called once per frame
