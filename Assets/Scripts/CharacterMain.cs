@@ -94,11 +94,11 @@ public class CharacterMain : MonoBehaviour {
 			anim.SetBool ("jump", false);
 			anim.SetBool ("idle", false);
 			if (camera2D == true) {
-				transform.position += new Vector3 (0.08f, 0, 0);
+				transform.position += new Vector3 (0.12f, 0, 0);
 			} else if (rightCamera3Df == true) {
-				transform.position += new Vector3 (0, 0, -0.08f);
+				transform.position += new Vector3 (0, 0, -0.12f);
 			} else {
-				transform.position += new Vector3 (0, 0, 0.08f);
+				transform.position += new Vector3 (0, 0, 0.12f);
 			}
 
 		} else if (Input.GetKey (KeyCode.LeftArrow)) {
@@ -106,11 +106,11 @@ public class CharacterMain : MonoBehaviour {
 			anim.SetBool ("jump", false);
 			anim.SetBool ("idle", false);
 			if (camera2D == true) {
-				transform.position += new Vector3 (-0.08f, 0, 0);
+				transform.position += new Vector3 (-0.12f, 0, 0);
 			} else if (rightCamera3Df == true) {
-				transform.position += new Vector3 (0, 0, 0.08f);
+				transform.position += new Vector3 (0, 0, 0.12f);
 			} else {
-				transform.position += new Vector3 (0, 0, -0.08f);
+				transform.position += new Vector3 (0, 0, -0.12f);
 			}
 
 		} else if (Input.GetKeyDown (KeyCode.Space) && onGround) {
@@ -127,9 +127,9 @@ public class CharacterMain : MonoBehaviour {
 			anim.SetBool ("jump", false);
 			anim.SetBool ("idle", false);
 			if (rightCamera3Df == true) {
-				transform.position += new Vector3 (0.08f, 0, 0);
+				transform.position += new Vector3 (0.12f, 0, 0);
 			} else {
-				transform.position += new Vector3 (-0.08f, 0, 0);
+				transform.position += new Vector3 (-0.12f, 0, 0);
 			}
 
 		} else if (Input.GetKey (KeyCode.DownArrow) && camera2D == false) {
@@ -137,9 +137,9 @@ public class CharacterMain : MonoBehaviour {
 			anim.SetBool ("jump", false);
 			anim.SetBool ("idle", false);
 			if (rightCamera3Df == true) {
-				transform.position += new Vector3 (-0.08f, 0, 0);
+				transform.position += new Vector3 (-0.12f, 0, 0);
 			} else {
-				transform.position += new Vector3 (0.08f, 0, 0);
+				transform.position += new Vector3 (0.12f, 0, 0);
 			}
 		} else {
 			anim.SetBool ("walk", false);
