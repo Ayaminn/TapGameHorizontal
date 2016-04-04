@@ -3,7 +3,6 @@ using System.Collections;
 
 public class Goal : MonoBehaviour {
 	public Camera came2;
-	public GameObject my;
 
 	// Use this for initialization
 	void Start () {
@@ -12,10 +11,11 @@ public class Goal : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		transform.Rotate (new Vector3 (0, 0, -0.5f));
 		if (came2.enabled){
-			my.SetActive (true);
+			gameObject.SetActive (true);
 		} else {
-			my.SetActive (false);
+			gameObject.SetActive (false);
 		}
 	}
 
