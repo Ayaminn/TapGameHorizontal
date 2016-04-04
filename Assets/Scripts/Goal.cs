@@ -18,4 +18,10 @@ public class Goal : MonoBehaviour {
 			my.SetActive (false);
 		}
 	}
+
+	void OnCollisionEnter (Collision col) {
+		if (col.transform.tag == "Player") {
+			Application.LoadLevel ("Goal");
+		}
+	}
 }
