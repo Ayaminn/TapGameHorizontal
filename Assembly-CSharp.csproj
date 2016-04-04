@@ -45,6 +45,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Fade\Samples\FadeTest.cs" />
+     <Compile Include="Assets\Fade\Scripts\Fade.cs" />
+     <Compile Include="Assets\Fade\Scripts\FadeImage.cs" />
+     <Compile Include="Assets\Fade\Scripts\FadeUI.cs" />
+     <Compile Include="Assets\Fade\Scripts\IFade.cs" />
      <Compile Include="Assets\Scripts\Box.cs" />
      <Compile Include="Assets\Scripts\CharacterMain.cs" />
      <Compile Include="Assets\Scripts\Coll.cs" />
@@ -58,12 +63,15 @@
      <Compile Include="Assets\Scripts\Waterwheel.cs" />
      <Compile Include="Assets\Scripts\monster.cs" />
      <Compile Include="Assets\Scripts\myUnityChanScript.cs" />
+     <None Include="Assets\Fade\Materials\UI-Fade-Alpha.shader" />
      <None Include="Assets\Animal Adventure Pack\sample_Prefabs\Shader\Unlit_decal.shader" />
+     <None Include="Assets\Fade\Materials\UI-Fade-Cutout.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\MobileBloom.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ContrastComposite.shader" />
      <None Include="Assets\Monster\shaders\vertexAnim.shader" />
      <None Include="Assets\Monster\shaders\bumpSpecmap.shader" />
      <None Include="Assets\Monster\shaders\metalA.shader" />
+     <None Include="Assets\Fade\Materials\UI-Mask.shader" />
      <None Include="Assets\Monster\shaders\caveShader.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableBlur.shader" />
      <None Include="Assets\Monster\shaders\monsterShader.shader" />
