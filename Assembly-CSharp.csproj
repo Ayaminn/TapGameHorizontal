@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\Coll.cs" />
      <Compile Include="Assets\Scripts\Five.cs" />
      <Compile Include="Assets\Scripts\Goal.cs" />
+     <Compile Include="Assets\Scripts\GoalTo.cs" />
      <Compile Include="Assets\Scripts\Menu.cs" />
      <Compile Include="Assets\Scripts\Select.cs" />
      <Compile Include="Assets\Scripts\SetAct.cs" />

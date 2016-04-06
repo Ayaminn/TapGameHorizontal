@@ -22,22 +22,23 @@ public class Goal : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		transform.Rotate (new Vector3 (0, 0, -0.5f));
-		if (came2.enabled){
+		if (came2.enabled==true){
+			Debug.Log ("came");
 			gameObject.SetActive (true);
 		} else {
-			gameObject.SetActive (false);
+			//gameObject.SetActive (false);
 		}
 	}
 
 	void OnCollisionEnter (Collision col) {
 		if (col.transform.tag == "Player") {
 			group.blocksRaycasts = false;
-			fade.FadeIn (1, () =>
+			fade.FadeIn (3, () =>
 				{
 					//image.color = (isMainColor) ? color1 : color2;
 					isMainColor = !isMainColor;
 					Application.LoadLevel ("Goal");
-					fade.FadeOut(1, ()=>{
+					fade.FadeOut(3, ()=>{
 						
 						group.blocksRaycasts = true;
 					});
